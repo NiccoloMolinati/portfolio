@@ -25,7 +25,18 @@ canvas {position: fixed;
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: -1;}
+    z-index: -1;
+    pointer-events: none;}
+
+#three-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none; /* Non blocca lo scroll */
+}
 
 div#cont1_col1 {
     margin-top: 35%;
@@ -40,7 +51,9 @@ div#cont1_col2 {
     border-right: 10%;
     margin-top: 7%;
 }
-
+div#container2{
+    margin-top: 30%;
+}
 h5 {
     font-family: 'karla', sans-serif;
 }

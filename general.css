@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'karla';
+    src: url('fonts/Karla/static/Karla-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'merriweather'; 
+    src: url('fonts/Merriweather/Merriweather-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+body {
+    font-family: 'merriweather', sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+
+canvas {position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;}
+
+div#cont1_col1 {
+    margin-top: 30%;
+}
+
+h1 {
+    font-family: 'karla', sans-serif;
+    margin-left: 6%;
+}
+
+a {
+    font-family: 'karla', sans-serif;
+    margin-inline: 6em;
+    margin-top: 2em;
+}

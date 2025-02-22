@@ -28,12 +28,25 @@ canvas {position: fixed;
     z-index: -1;}
 
 div#cont1_col1 {
-    margin-top: 30%;
+    margin-top: 35%;
+    margin-left: 6.5%;
 }
 
 h1 {
     font-family: 'karla', sans-serif;
-    margin-left: 6%;
+}
+
+div#cont1_col2 {
+    border-right: 10%;
+    margin-top: 7%;
+}
+
+h5 {
+    font-family: 'karla', sans-serif;
+}
+p {
+    font-family: 'merriweather', sans-serif;
+    font-size: 84%;
 }
 
 a {

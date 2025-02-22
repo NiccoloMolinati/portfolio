@@ -16,7 +16,7 @@ document.body.appendChild(renderer.domElement);
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight, 1, 1000);
-camera.position.set(4, 5, 11);
+camera.position.set(1, 1, 10);
 camera.lookAt(0,0,0);
 
 const light1 = new THREE.SpotLight(0xffffff, 600, 100, 0.2, 0.3);

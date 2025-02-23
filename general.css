@@ -20,24 +20,26 @@ body {
     overflow: hidden;
 }
 
-canvas {position: fixed;
+canvas {position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: -1;
-    pointer-events: none;}
+    z-index: -1;}
 
-#three-container {
-    position: fixed;
+#three-container1 {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     z-index: -1;
-    pointer-events: none; /* Non blocca lo scroll */
+ 
 }
-
+div#container1{
+    margin-bottom: 50%;
+}
+header{z-index: 2;}
 div#cont1_col1 {
     margin-top: 35%;
     margin-left: 6.5%;
@@ -52,7 +54,7 @@ div#cont1_col2 {
     margin-top: 7%;
 }
 div#container2{
-    margin-top: 30%;
+    margin-top: 20%;
 }
 h5 {
     font-family: 'karla', sans-serif;
@@ -66,4 +68,12 @@ a {
     font-family: 'karla', sans-serif;
     margin-inline: 6em;
     margin-top: 2em;
+}
+a.button-to-scroll {
+    text-decoration: none;
+    font-family: 'karla', sans-serif;
+    color: blue;
+    padding: 2%;
+    padding-left: 0%;
+    margin: 0;
 }

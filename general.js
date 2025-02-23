@@ -12,25 +12,27 @@ renderer.setPixelRatio(window.devicePixelRatio);
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
-const container = document.getElementById('three-container');
+
+const container = document.getElementById('three-container1');
 container.appendChild(renderer.domElement);
+
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight, 1, 1000);
 camera.position.set(1, 1, 10);
 camera.lookAt(0,0,0);
 
-const light1 = new THREE.SpotLight(0xffffff, 600, 100, 0.2, 0.3);
-light1.position.set(10, 25, 10)
-light1.castShadow = true;
-light1.shadow.bias = -0.0001;
-scene.add(light1)
+//const light1 = new THREE.SpotLight(0xffffff, 600, 100, 0.2, 0.3);
+//light1.position.set(10, 25, 10)
+//light1.castShadow = true;
+//light1.shadow.bias = -0.0001;
+//scene.add(light1)
 
-const light2 = new THREE.SpotLight(0xffffff, 600, 100, 0.2, 0.3);
-light2.position.set(-15, -15, -15)
-light2.castShadow = true;
-light2.shadow.bias = -0.0001;
-scene.add(light2)
+//const light2 = new THREE.SpotLight(0xffffff, 600, 100, 0.2, 0.3);
+//light2.position.set(-15, -15, -15)
+//light2.castShadow = true;
+//light2.shadow.bias = -0.0001;
+//scene.add(light2)
 
 //const light = new THREE.AmbientLight(0xffffff, 1);
 //light.castShadow = true;
@@ -38,7 +40,7 @@ scene.add(light2)
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
-controls.enablePan = false;
+controls.enablePan = true;
 controls.minDistance = 5;
 controls.maxDistance = 20;
 controls.minPolarAngle = 0.5;
@@ -94,3 +96,11 @@ function animate() {
     renderer.render(scene, camera);
 }
 animate()
+
+//const btn = document.getElementById('scroll-down-main');
+//btn.addEventListener('click', () => {
+//    document.documentElement.scrollTo({
+//        to: document.getElementById(container2),
+//        behavior: "smooth",
+//    });
+//});

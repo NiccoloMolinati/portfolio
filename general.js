@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
+const container = document.getElementById('three-container1');
 const renderer = new THREE.WebGLRenderer({antialias: true});
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 
@@ -13,7 +14,6 @@ renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
 
-const container = document.getElementById('three-container1');
 container.appendChild(renderer.domElement);
 
 

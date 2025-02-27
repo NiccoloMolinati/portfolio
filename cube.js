@@ -31,12 +31,12 @@ function createTextTexture(text) {
 
 // Creazione delle 6 facce con testo diverso
 const materials = [
-    new THREE.MeshBasicMaterial({ map: createTextTexture("Fronte") }),
-    new THREE.MeshBasicMaterial({ map: createTextTexture("Retro") }),
-    new THREE.MeshBasicMaterial({ map: createTextTexture("Alto") }),
-    new THREE.MeshBasicMaterial({ map: createTextTexture("Basso") }),
-    new THREE.MeshBasicMaterial({ map: createTextTexture("Sinistra") }),
-    new THREE.MeshBasicMaterial({ map: createTextTexture("Destra") })
+    new THREE.MeshBasicMaterial({ map: createTextTexture("UX DESIGN") }),
+    new THREE.MeshBasicMaterial({ map: createTextTexture("ML") }),
+    new THREE.MeshBasicMaterial({ map: createTextTexture("INFORMATION VISUALIZATION") }),
+    new THREE.MeshBasicMaterial({ map: createTextTexture("LOD") }),
+    new THREE.MeshBasicMaterial({ map: createTextTexture("DA") }),
+    new THREE.MeshBasicMaterial({ map: createTextTexture("BOH") })
 ];
 
 // Creazione del cubo

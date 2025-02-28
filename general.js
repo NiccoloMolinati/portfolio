@@ -34,9 +34,9 @@ camera.lookAt(0,0,0);
 //light2.shadow.bias = -0.0001;
 //scene.add(light2)
 
-//const light = new THREE.AmbientLight(0xffffff, 1);
-//light.castShadow = true;
-//scene.add(light);
+const light = new THREE.AmbientLight(0xffffff, 1);
+light.castShadow = true;
+scene.add(light);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
@@ -72,8 +72,8 @@ controls.update()
 //    scene.add(mesh);
 //});
 
-const loader = new GLTFLoader().setPath('./');
-loader.load('face.glb', glft => {
+const loader = new GLTFLoader().setPath('./models/');
+loader.load('face.gltf', glft => {
     const mesh = glft.scene;
     mesh.position.set(0,0,0);
     scene.add(mesh)

@@ -6,8 +6,8 @@ const container = document.getElementById('three-container1');
 const renderer = new THREE.WebGLRenderer({antialias: true});
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 
-renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setClearColor(0xffffff);
+renderer.setSize(container.clientWidth, container.clientHeight);
+renderer.setClearColor(0x242424);
 renderer.setPixelRatio(window.devicePixelRatio);
 
 renderer.shadowMap.enabled = true;
@@ -18,7 +18,7 @@ container.appendChild(renderer.domElement);
 
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight, 1, 1000);
+const camera = new THREE.PerspectiveCamera(45, container.clientWidth/container.clientHeight, 1, 1000);
 camera.position.set(1, 1, 10);
 camera.lookAt(0,0,0);
 
@@ -34,8 +34,7 @@ camera.lookAt(0,0,0);
 //light2.shadow.bias = -0.0001;
 //scene.add(light2)
 
-const light = new THREE.AmbientLight(0xffffff, 1);
-light.castShadow = true;
+const light = new THREE.AmbientLight(0xffffff, 3);
 scene.add(light);
 
 const controls = new OrbitControls(camera, renderer.domElement);
@@ -45,8 +44,7 @@ controls.minDistance = 5;
 controls.maxDistance = 20;
 controls.minPolarAngle = 0.5;
 controls.maxPolarAngle = 1.5;
-controls.autoRotate = true;
-controls.autoRotateSpeed = 3.0
+controls.autoRotate = false;
 controls.target = new THREE.Vector3(0, 0, 0);
 controls.update()
 
@@ -61,23 +59,30 @@ controls.update()
 //groundMesh.receiveShadow = true;
 //scene.add(groundMesh);
 
-//const loader = new GLTFLoader().setPath("./");
-//loader.load('random.glb', (gltf) => {
-//    const mesh = gltf.scene;
-//    mesh.traverse((child) => {
-//        child.castShadow = true;
-//        child.receiveShadow = true
-//    });
-//    mesh.position.set(0, 1.05, 0);
-//    scene.add(mesh);
-//});
+const loader1 = new GLTFLoader().setPath("./models/");
+loader1.load('face.gltf', (gltf) => {
+    const mesh1 = gltf.scene;
+    mesh1.traverse((child) => {
+        child.castShadow = true;
+        child.receiveShadow = true
+    });
+    mesh1.position.set(5, 0, 0); //x, z, y
+    mesh1.rotation.set(3, 0, 0)
+    scene.add(mesh1);
+});
 
-const loader = new GLTFLoader().setPath('./models/');
-loader.load('face.gltf', glft => {
-    const mesh = glft.scene;
-    mesh.position.set(0,0,0);
-    scene.add(mesh)
-})
+const loader2 = new GLTFLoader().setPath("./models/");
+loader2.load('face.gltf', (gltf) => {
+    const mesh2 = gltf.scene;
+    mesh2.traverse((child) => {
+        child.castShadow = true;
+        child.receiveShadow = true
+    });
+    mesh2.position.set(-5, 0, 0);
+    scene.add(mesh2);
+});
+
+
 
 let mouseX = 0;
 let mouseY = 0;

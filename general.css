@@ -21,12 +21,10 @@ body {
 }
 
 #three-container1 {
-    position: absolute; /* Lo fissa come sfondo */
-    top: 0;
-    left: 0;
-    width: 100vw; /* Occupa tutto il viewport */
-    height: 100vh; /* Occupa tutta l'altezza */
-    z-index: -1; /* Lo manda dietro gli altri elementi */
+    position: relative; /* Lo fissa come sfondo */
+    width: 80vw; /* Occupa tutto il viewport */
+    height: 50vh; /* Occupa tutta l'altezza */
+    z-index: 0; /* Lo manda dietro gli altri elementi */
 }
 
 /* Seconda scena: Posizionata dentro il suo div */
@@ -38,6 +36,7 @@ body {
 }
 
 canvas {
+    position: relative;
     display: block; /* Evita margini indesiderati */
 }
 
@@ -47,7 +46,7 @@ div#container1{
 }
 header{z-index: 2;}
 div#cont1_col1 {
-    margin-top: 35%;
+    margin-top: 15%;
     margin-left: 6.5%;
 }
 

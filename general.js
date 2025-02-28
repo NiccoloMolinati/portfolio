@@ -72,10 +72,12 @@ controls.update()
 //    scene.add(mesh);
 //});
 
-const geometry = new THREE.TorusKnotGeometry(2, 0.8, 150, 55 ); 
-const material = new THREE.MeshNormalMaterial();
-const mesh = new THREE.Mesh( geometry, material );
-scene.add( mesh );
+const loader = new GLTFLoader().setPath('./');
+loader.load('face.glb', glft => {
+    const mesh = glft.scene;
+    mesh.position.set(0,0,0);
+    scene.add(mesh)
+})
 
 let mouseX = 0;
 let mouseY = 0;
@@ -90,8 +92,6 @@ document.addEventListener('mousemove', (event) => {
 
 function animate() {
     requestAnimationFrame(animate);
-    mesh.rotation.x = mouseX * (Math.PI/3); // Ruota orizzontalmente
-    mesh.rotation.y = mouseY * (Math.PI/3); // Ruota verticalmente
     controls.update()
     renderer.render(scene, camera);
 }

@@ -58,7 +58,7 @@ controls.update()
 //groundMesh.castShadow = false;
 //groundMesh.receiveShadow = true;
 //scene.add(groundMesh);
-
+let mesh1
 const loader1 = new GLTFLoader().setPath("./models/");
 loader1.load('face.gltf', (gltf) => {
     const mesh1 = gltf.scene;
@@ -70,7 +70,7 @@ loader1.load('face.gltf', (gltf) => {
     mesh1.rotation.set(3, 0, 0)
     scene.add(mesh1);
 });
-
+let mesh2
 const loader2 = new GLTFLoader().setPath("./models/");
 loader2.load('face.gltf', (gltf) => {
     const mesh2 = gltf.scene;
@@ -79,6 +79,7 @@ loader2.load('face.gltf', (gltf) => {
         child.receiveShadow = true
     });
     mesh2.position.set(-5, 0, 0);
+    mesh2.rotation.set(3, 0, 0)
     scene.add(mesh2);
 });
 
@@ -98,6 +99,11 @@ document.addEventListener('mousemove', (event) => {
 function animate() {
     requestAnimationFrame(animate);
     controls.update()
+    mesh1.rotation.y = mouseX * Math.PI; // Rotazione orizzontale
+    mesh1.rotation.x = -mouseY * Math.PI / 4
+
+    mesh2.rotation.y = mouseX * Math.PI; // Rotazione orizzontale
+    mesh2.rotation.x = -mouseY * Math.PI / 4
     renderer.render(scene, camera);
 }
 animate()

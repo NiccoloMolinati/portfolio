@@ -7,7 +7,7 @@ const renderer = new THREE.WebGLRenderer({antialias: true});
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 
 renderer.setSize(container.clientWidth, container.clientHeight);
-renderer.setClearColor(0x242424);
+renderer.setClearColor(0x2e4057);
 renderer.setPixelRatio(window.devicePixelRatio);
 
 renderer.shadowMap.enabled = true;
@@ -19,7 +19,7 @@ container.appendChild(renderer.domElement);
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(45, container.clientWidth/container.clientHeight, 1, 1000);
-camera.position.set(1, 1, 10);
+camera.position.set(1, 1, 2);
 camera.lookAt(0,0,0);
 
 //const light1 = new THREE.SpotLight(0xffffff, 600, 100, 0.2, 0.3);
@@ -58,30 +58,33 @@ controls.update()
 //groundMesh.castShadow = false;
 //groundMesh.receiveShadow = true;
 //scene.add(groundMesh);
-let mesh1
+let mesh1;
 const loader1 = new GLTFLoader().setPath("./models/");
 loader1.load('face.gltf', (gltf) => {
-    const mesh1 = gltf.scene;
+    mesh1 = gltf.scene;
     mesh1.traverse((child) => {
         child.castShadow = true;
         child.receiveShadow = true
     });
-    mesh1.position.set(5, 0, 0); //x, z, y
-    mesh1.rotation.set(3, 0, 0)
+    mesh1.position.set(0, 0, 0); //x, z, y
+    mesh1.rotation.set(0, 0, 0)
+    mesh1.rotation.x = Math.PI / 2
+
     scene.add(mesh1);
 });
-let mesh2
-const loader2 = new GLTFLoader().setPath("./models/");
-loader2.load('face.gltf', (gltf) => {
-    const mesh2 = gltf.scene;
-    mesh2.traverse((child) => {
-        child.castShadow = true;
-        child.receiveShadow = true
-    });
-    mesh2.position.set(-5, 0, 0);
-    mesh2.rotation.set(3, 0, 0)
-    scene.add(mesh2);
-});
+
+//let mesh2;
+//const loader2 = new GLTFLoader().setPath("./models/");
+//loader2.load('face.gltf', (gltf) => {
+//    mesh2 = gltf.scene;
+//    mesh2.traverse((child) => {
+//        child.castShadow = true;
+//        child.receiveShadow = true
+//    });
+//    mesh2.position.set(-7, 0, 0);
+//    mesh2.rotation.set(90, 0, 0)
+//    scene.add(mesh2);
+//});
 
 
 
@@ -102,8 +105,8 @@ function animate() {
     mesh1.rotation.y = mouseX * Math.PI; // Rotazione orizzontale
     mesh1.rotation.x = -mouseY * Math.PI / 4
 
-    mesh2.rotation.y = mouseX * Math.PI; // Rotazione orizzontale
-    mesh2.rotation.x = -mouseY * Math.PI / 4
+//    mesh2.rotation.y = mouseX * Math.PI; // Rotazione orizzontale
+//    mesh2.rotation.x = -mouseY * Math.PI / 4
     renderer.render(scene, camera);
 }
 animate()

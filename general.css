@@ -22,8 +22,8 @@ body {
 
 #three-container1 {
     position: relative; /* Lo fissa come sfondo */
-    width: 80vw; /* Occupa tutto il viewport */
-    height: 50vh; /* Occupa tutta l'altezza */
+    width: 100vw; /* Occupa tutto il viewport */
+    height: 60vh; /* Occupa tutta l'altezza */
     z-index: 0; /* Lo manda dietro gli altri elementi */
 }
 
@@ -42,21 +42,26 @@ canvas {
 
 
 div#container1{
+    max-width: 100%;
+    width: 100%;
     margin-bottom: 50%;
+    background-color: #2e4057;
 }
-header{z-index: 2;}
+header{z-index: 2;
+    background-color: #2e4057;}
 div#cont1_col1 {
-    margin-top: 15%;
+    margin-top: 5%;
     margin-left: 6.5%;
 }
 
 h1 {
     font-family: 'karla', sans-serif;
+    color: white;
 }
 
 div#cont1_col2 {
     border-right: 10%;
-    margin-top: 7%;
+    margin-top: 2%;
 }
 div#container2{
     margin-top: 0%;

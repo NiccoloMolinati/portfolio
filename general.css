@@ -11,14 +11,22 @@
     font-style: normal;
 }
 
-
+@font-face {
+    font-family: 'CAMERA';
+    src: url('fonts/Better\ VCR\ 9.0.1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 
 body {
-    font-family: 'merriweather', sans-serif;
+    font-family: 'CAMERA', sans-serif;
     margin: 0;
     overflow: hidden;
 }
+.background1 { background-image: url('fonts/IMG-20220422-WA0024.jpg');
+    width: 100vw;
+height: 100vw;}
 
 #three-container1 {
     position: relative; /* Lo fissa come sfondo */
@@ -45,17 +53,16 @@ div#container1{
     max-width: 100%;
     width: 100%;
     margin-bottom: 50%;
-    background-color: #2e4057;
 }
 header{z-index: 2;
-    background-color: #2e4057;}
+}
 div#cont1_col1 {
     margin-top: 5%;
     margin-left: 6.5%;
 }
 
-h1 {
-    font-family: 'karla', sans-serif;
+h1, h2, h3, h4, h5 {
+    font-family: 'CAMERA', sans-serif;
     color: white;
 }
 

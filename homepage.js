@@ -3,14 +3,14 @@ function updateCounter() {
     document.getElementById("counter").textContent = now; 
 }
 
-setInterval(updateCounter, 1);
+setInterval(updateCounter, 100);
 
 function updateCounter2() {
     const now = new Date().getTime(); // Ottiene i millisecondi correnti
     document.getElementById("counter2").textContent = now + 8674562349723; 
 }
 
-setInterval(updateCounter2, 1);
+setInterval(updateCounter2, 100);
 
 function updateCounter1() {
     const now = new Date().getTime(); // Ottiene i millisecondi correnti
@@ -18,4 +18,4 @@ function updateCounter1() {
     document.getElementById("counter1").textContent = upd; 
 }
 
-setInterval(updateCounter1, 1);
+setInterval(updateCounter1, 100);

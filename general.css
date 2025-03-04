@@ -57,15 +57,19 @@ div#container1{
 header{z-index: 2;
 }
 div#cont1_col1 {
-    margin-top: 5%;
+    margin-top: 0%;
     margin-left: 6.5%;
 }
 
 h1, h2, h3, h4, h5 {
     font-family: 'CAMERA', sans-serif;
     color: white;
+    padding: 1%;
+    background-color: black;
 }
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover { color:yellow
 
+}
 div#cont1_col2 {
     border-right: 10%;
     margin-top: 2%;

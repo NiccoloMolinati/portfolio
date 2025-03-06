@@ -18,4 +18,42 @@
     font-style: normal;
 }
 
+@font-face{
+    font-family: 'moderniz';
+    src: url('fonts/Moderniz.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
+/*F59F00*/
+body {
+    font-family: 'moderniz', sans-serif;
+}
+h1 {
+    font-family: 'moderniz', sans-serif;
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+}
+
+.marquee {
+    display: inline-block;
+    animation: scrollText 10s linear infinite;
+    font-size: 24px;
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

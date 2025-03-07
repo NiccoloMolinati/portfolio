@@ -27,33 +27,60 @@
 
 /*F59F00*/
 body {
-    font-family: 'moderniz', sans-serif;
+    background-color: #000000 !important;
 }
 h1 {
     font-family: 'moderniz', sans-serif;
+    font-size: 11.5em !important;
+    position: relative;
+    color: white;
+    justify-self: center;
+    margin-bottom: 0% !important;
+    padding-bottom: 0% !important;
+}
+div.col-7 h1{
+    position: relative;
+    font-size: 5em !important;
+    justify-self: start;
+}
+div.col-5 h1{
+    font-size: 8em !important;
+    justify-self: end;
 }
 
 .marquee-container {
-    width: 100%;
+    background-color: #F59F00;
+    margin-bottom: 0.5em;
+    }
+.marquee-content {
     overflow: hidden;
     white-space: nowrap;
-    background-color: black;
-    color: white;
-    padding: 10px 0;
-    position: relative;
-}
-
-.marquee {
     display: inline-block;
-    animation: scrollText 10s linear infinite;
-    font-size: 24px;
-}
+    animation: stage_animation 5s linear infinite;
+    }
+.marquee-content span {
+    display: inline-block;
+    font-family: 'moderniz', sans-serif;
+    color: #000000;
+    font-size: 20px;
+    }
 
-@keyframes scrollText {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
+div#second{
+    animation: stage_animation1 5s linearr infinite !important;
 }
+@keyframes stage_animation {
+        0% {
+        transform: translate3d(0, 0, 0);
+        }
+        100% {
+        transform: translate3d(-50%, 0, 0);
+        }
+        }
+@keyframes stage_animation1 {
+        0% {
+        transform: translate3d(0, 0, 0);
+        }
+        100% {
+        transform: translate3d(50%, 0, 0);
+        }
+        }

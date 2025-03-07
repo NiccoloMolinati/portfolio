@@ -27,13 +27,13 @@
 
 /*F59F00*/
 body {
-    background-color: #000000 !important;
+    background-color: #ffffff !important;
 }
 h1 {
     font-family: 'moderniz', sans-serif;
-    font-size: 11.5em !important;
+    font-size: 11.7em !important;
     position: relative;
-    color: white;
+    color: rgb(0, 0, 0);
     justify-self: center;
     margin-bottom: 0% !important;
     padding-bottom: 0% !important;
@@ -47,18 +47,24 @@ div.col-5 h1{
     font-size: 8em !important;
     justify-self: end;
 }
+div.col-5 h1:first-child{
+    font-size: 5em !important;
+    justify-self: end;
+}
 
 .marquee-container {
-    background-color: #F59F00;
+    overflow: hidden;
+    background-color: #EA526F;
     margin-bottom: 0.5em;
     }
 .marquee-content {
     overflow: hidden;
     white-space: nowrap;
     display: inline-block;
-    animation: stage_animation 5s linear infinite;
+    animation: stage_animation 15s linear infinite;
     }
 .marquee-content span {
+    padding-top: 0.2%;
     display: inline-block;
     font-family: 'moderniz', sans-serif;
     color: #000000;
@@ -66,7 +72,8 @@ div.col-5 h1{
     }
 
 div#second{
-    animation: stage_animation1 5s linearr infinite !important;
+    animation: none;
+    animation: stage_animation1 15s linear infinite !important;
 }
 @keyframes stage_animation {
         0% {
@@ -78,9 +85,23 @@ div#second{
         }
 @keyframes stage_animation1 {
         0% {
-        transform: translate3d(0, 0, 0);
+        transform: translate3d(-50%, 0, 0);
         }
         100% {
-        transform: translate3d(50%, 0, 0);
+        transform: translate3d(0, 0, 0);
         }
         }
+
+div#second-section {
+    margin-top: 30%;
+}
+#who-am-i{
+    font-family: 'karla', sans-serif;
+    font-size: large;
+    font-weight: bold;
+    margin-top: 3%;
+    margin-left: 8%;
+    margin-right: 8%;
+    columns: 2;
+    column-gap: 2em;
+}

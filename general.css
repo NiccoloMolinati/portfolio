@@ -12,8 +12,8 @@
 }
 
 @font-face {
-    font-family: 'CAMERA';
-    src: url('fonts/Better\ VCR\ 9.0.1.ttf') format('truetype');
+    font-family: 'gontserrat';
+    src: url('fonts/Gontserrat/Gontserrat-Medium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -95,13 +95,23 @@ div#second{
 div#second-section {
     margin-top: 30%;
 }
-#who-am-i{
-    font-family: 'karla', sans-serif;
+#who-am-i p{
+    font-family: 'gontserrat', sans-serif;
     font-size: large;
-    font-weight: bold;
     margin-top: 3%;
-    margin-left: 8%;
-    margin-right: 8%;
+    margin-left: 16%;
+    margin-right: 16%;
     columns: 2;
     column-gap: 2em;
+    margin-bottom: 10%;
+}
+footer{
+    background-color: #000000;
+}
+footer div {
+    padding: 5%;
+}
+footer div span {
+    color:white;
+    font-family: 'moderniz', sans-serif;
 }

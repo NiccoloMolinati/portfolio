@@ -6,3 +6,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const bottone = document.getElementById("homepage");
+    if (bottone) {
+        bottone.addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+    }
+});
